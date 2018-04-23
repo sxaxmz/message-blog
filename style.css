@@ -1,0 +1,106 @@
+
+		#mid-txt {
+			text-align: center;
+			margin: 30px;
+			background-color: green;	
+			width: 70%;
+			position: relative;
+			left: 200px;
+			opacity: 0.7;
+			padding: -15px;
+		}
+
+		#mid-txt h1 {
+			color:white;
+		}
+
+		#mid-txt p {
+			color: white;
+			font-size: 25px;
+		}
+
+		#mid-txt p:hover {
+			color: #000000;
+			text-decoration: underline;
+			font-weight: bold;
+		}
+
+		.borders {
+			border-radius: 5em;
+			border: 4px black dashed;
+			border-color: #e0e0d1;
+		}
+
+
+
+		.posts {
+		background-color: grey;
+		margin: 0 auto;	
+		overflow: scroll;
+        height: calc(100% - 200px);
+		width: 600px;
+		}
+
+		.posts form {
+			position: relative;
+			left: 80px;
+			margin: 10px;
+			border: 1px black solid;
+			width: 300px;
+		}
+
+		#comment {
+			margin: 15px;
+			width: 250px;
+			height: 70px;
+		}
+
+		/*#postText {
+			margin: 15px;
+			width: 150px;
+			height: 75px;
+		}*/
+
+		#postButton {
+			width: 70px;
+			margin: 15px;
+		}
+
+		#posted hr {
+			border-color: #000000;
+		}
+
+		#posted p {
+			color: #ffffff;
+		}
+
+		#posted h3 {
+			color: #000000;
+			font-weight: bold;
+		}
+
+		#posted h3:hover {
+			color: #0756c4;
+			cursor: default;
+		}
+		#postedUser {
+			margin:15px;
+		}
+
+		#post {
+			margin:15px;
+		}
+
+		#recent {
+			width: 450px;
+			margin: 0 auto;
+		}
+		#recent h4 {
+			margin-left: 10px;
+			font-weight: 700;
+			color: #ffffff;
+		}
+
+		#recent hr {
+		border-height: 40px;
+		}

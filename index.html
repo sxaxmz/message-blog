@@ -1,0 +1,83 @@
+<doctype html>
+<html>
+
+	<head>
+		<title> Homepage </title>
+
+		<meta charset="utf-8" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	</head>
+
+	<body>
+
+	<div id="mid-txt" id="top" class="borders">
+		<h1> Hello world! </h1>
+		<p> This is a <b>simple project</b> aims to create a <u>simple simulator</u> to the concept of blog-messaging concept. <br> This project will be built intially using <sup> HTML </sup> , <sub> CSS </sub> and <sup> Javascript </sup>. </p>
+	</div>
+
+	<hr>
+
+
+	<div class="posts">
+	   <form>
+	   	<span>
+		  <input id="postUser" type="text" placeholder="username"> <input id="postButton" type="button" class="btn btn-primary" value="Post"><br>
+		  <textarea class="form-control" rows="2" id="comment" placeholder="what is on your mind?"></textarea>
+		  <!--<input id="comment" type="text" placeholder="what is on your mind?"> --> <br>
+		  
+	    </span>
+	   </form>
+
+		<div id="posted">
+			<div id="recent">
+			<h4> recent: </h4>
+			 <hr>
+			</div>
+			<p id="post"></p>
+		</div>
+	</div>
+
+
+
+
+    <script type="text/javascript">
+
+	    	var number = 0;
+	    	var posts = new Array();
+	    	posts[0] = "";
+
+
+	    	document.getElementById("postButton").onclick  = function() {
+	    		var oldNumber = number;
+	    		var newNumber = ++number;
+
+	    		var username = document.getElementById("postUser").value;
+
+	    		//checking if a new value has been added to the array
+	    		if (newNumber > oldNumber) {
+	    			//adding the text to the new array value
+	    		posts [number] = document.getElementById("comment").value + "<br>";
+
+
+	    		//adding the text as a post/message
+	    		document.getElementById("post").innerHTML = document.getElementById("post").innerHTML + "<h3>"+username+"</h3>" +posts[number] +"<br>";
+
+	    		//adding line to differentiate between old messages/posts
+	    		document.getElementById("post").innerHTML = document.getElementById("post").innerHTML + "<hr>";
+
+	    		//clearing the textFields for new input
+	    		document.getElementById("postUser").value = "";
+	    		document.getElementById("comment").value = "";
+	    	                  }
+
+	    	}
+	    </script>
+
+	</body>
+</html>
