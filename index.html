@@ -21,7 +21,7 @@
 
 	<body>
 
-		<nav class="navbar navbar-expand-lg navbar-light sticky-top bg-light">
+<nav class="navbar navbar-expand-lg navbar-light sticky-top bg-light">
   <a class="navbar-brand logo" href="index.html">Message-Blog</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -29,21 +29,31 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item active menu-item">
+        <a class="nav-link" href="landing.html">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="login.html">Login</a>
+      <li class="nav-item active menu-item">
+        <a class="nav-link" href="#">Feeds <span class="sr-only">(current)</span></a>
       </li>
-
-      <li class="nav-item">
+      <li class="nav-item menu-item">
         <a class="nav-link disabled" href="#">Followers</a>
       </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" readonly>
-      <button class="btn btn-outline-success my-2 my-sm-0 disabled" type="submit">Search</button>
+      <li >
+      <li class="nav-item">
+      <form class="form-inline my-2 my-lg-0 search-section">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
+  </li>
+    </ul>
+        
+      
+    <form class="form-inline my-2 my-lg-0" action="login.html">
+      <button class="btn btn-outline-success my-2 my-sm-0 top-links">Login</button>
+    </form>
+    <form class="form-inline my-2 my-lg-0" action="signup.html">
+      <button class="btn btn-success my-2 my-sm-0 top-links" href="login.html">Join Free</button>
+      </form>
   </div>
 </nav>
 
