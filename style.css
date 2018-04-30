@@ -159,3 +159,31 @@
 		body {
 			background-image: url("images/pattern3.png");
 		}
+
+		.login-form {
+			border: 1px #000000 solid;
+			background-color: #ffc299;
+			opacity: 0.6;
+			margin: 2px auto;
+			height: 190px;
+			width: 450px;
+		}
+
+		.login-form form {
+			margin: 10px;
+		}
+
+		.login-form h3 {
+			text-align: center;
+		}
+
+		#login-btn:hover {
+			background-color: #33ccff;
+			color: #ffffff;
+		}
+
+		.logo {
+			font-weight: Bold;
+			margin-top: 20px;
+		}
+		
