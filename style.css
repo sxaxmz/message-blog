@@ -39,7 +39,7 @@
 		}
 
 		#post-section {
-		margin: 0 auto;	
+		margin: 10px auto;	
 		width: 600px;
 		opacity: 0.8;
 		}
@@ -157,7 +157,11 @@
 		}
 
 		body {
-			background-image: url("images/pattern3.png");
+		  background: url("images/pattern3.png") no-repeat center center fixed; 
+          -webkit-background-size: cover;
+          -moz-background-size: cover;
+          -o-background-size: cover;
+          background-size: cover;
 		}
 
 		.login-form {
@@ -277,3 +281,28 @@
 			height: 30px;
 			width: 80px;
 		}
+
+		.container-contact {
+        text-align: center;
+        margin: 15px auto; 
+        border: 1px #000000 solid;
+        width: 500px;
+        }
+
+       .contactForm label {
+       margin: 5px; 
+       float: left;
+       }
+
+      .contactForm input {
+       padding: 5px;
+       }
+
+      .hidden {
+        display: none;
+      }
+
+     .bold {
+      font-weight: Bold;
+       font-size:16px;
+     }
