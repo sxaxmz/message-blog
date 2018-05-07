@@ -167,7 +167,7 @@
 		.login-form {
 			border: 1px #000000 solid;
 			background-color: #ffc299;
-			opacity: 0.6;
+			opacity: 0.8;
 			margin: 2px auto;
 			height: 190px;
 			width: 450px;
@@ -188,7 +188,7 @@
 
 		.logo {
 			font-weight: Bold;
-			margin-top: 20px;
+			margin-top: 25px;
 		}
 
 		.image {
@@ -267,6 +267,7 @@
 		.top-links {
 			margin: 2px;
 			height: 30px;
+			width: 60px;
 		}
 
 		.top-links button {
@@ -274,7 +275,7 @@
 		}
 
 		.search-section {
-			margin: 45px;
+			margin-right: 350px;
 		}
 
 		.search-section button {
@@ -282,20 +283,26 @@
 			width: 80px;
 		}
 
+		.search-section input {
+			width: 150px;
+		}
+
 		.container-contact {
         text-align: center;
         margin: 15px auto; 
         border: 1px #000000 solid;
+        background-color: #ffc299;
+		opacity: 0.8;
         width: 500px;
         }
 
-       .contactForm label {
+       .container-contact label {
        margin: 5px; 
        float: left;
        }
 
-      .contactForm input {
-       padding: 5px;
+      .container-contact input {
+       padding: 10px;
        }
 
       .hidden {
@@ -305,4 +312,77 @@
      .bold {
       font-weight: Bold;
        font-size:16px;
+     }
+
+     .container {
+     	width: 100%;
+     }
+
+
+      @media all and (min-width: 1000px) and (max-width:1500px) {
+
+     	.search-section {
+     		margin-right: 150px;
+     	}
+
+     }
+
+     @media all and (min-width: 700px) and (max-width:1000px) {
+
+     	.search-section {
+     		margin-right: 0;
+     		float: right;
+     	}
+
+     	.top-links {
+     		margin-left: 250px;
+     		width: 20%;
+     	}
+
+     }
+
+      @media all and (min-width: 500px) and (max-width:700px) {
+
+     	.login-form {
+     		width: 250px;
+     	}
+
+     	.search-section {
+     		margin-right: 0;
+     		
+     	}
+
+     	.search-section button {
+     		margin: 10px;
+     	}
+
+     	.search-section input {
+     		float: right;
+     	}
+
+     }
+
+     @media all and (max-width:500px){
+
+     	.login-form {
+     		width: 250px;
+     	}
+
+     	.container-contact {
+     		width: 250px;
+     	}
+
+     	.search-section {
+     		margin-right: 0;
+     		
+     	}
+
+     	.search-section button {
+     		margin: 10px;
+     	}
+
+     	.search-section input {
+     		float: right;
+     	}
+
      }

@@ -56,9 +56,13 @@ if ($error == "" && $missing == "") {
 <head>
   <meta charset="utf-8">
   <title> Contact Form </title>
-  <link rel="stylesheet" type="text/css" href="style.css">
   
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href="JQueryUI/jquery-ui.css" rel="stylesheet">
+        <script src="JQueryUI/jquery-ui.js"></script>
   
 <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -69,39 +73,30 @@ if ($error == "" && $missing == "") {
   <body>
     
     <nav class="navbar navbar-expand-lg navbar-light sticky-top bg-light">
-  <a class="navbar-brand logo" href="index.html">Message-Blog</a>
+  <a class="navbar-brand logo" href="landing.html">Message-Blog</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active menu-item">
-        <a class="nav-link" href="landing.html">Home </a>
-      </li>
-      <li class="nav-item active menu-item">
-        <a class="nav-link" href="index.html">Feeds </a>
-      </li>
-       <li class="nav-item active menu-item">
-        <a class="nav-link" href="#">Contact Us </a>
-      </li>
-      <li class="nav-item menu-item">
-        <a class="nav-link disabled" href="#">Followers</a>
-      </li>
-      <li >
-      <li class="nav-item">
-      <form class="form-inline my-2 my-lg-0 search-section">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </li>
-    </ul>
+     
+      <a class="nav-item menu-item nav-link" href="landing.html">Home </a>
+        <a class="nav-item menu-item nav-link" href="index.html">Feeds </a>
+        <a class="nav-item menu-item active nav-link" href="contactForm.html">Contact Us </a>
+        <a class="nav-item nav-link menu-item disabled" href="#">Followers</a>
+      </div>
+
+     <form class="form-inline my-2 my-lg-3 search-section">
+        <input class="form-control mr-sm-1" type="search" placeholder="Search" aria-label="Search" />
+        <button class="btn btn-outline-success my-2 my-sm-1" type="submit">Search</button>
+      </form>
         
       
-    <form class="form-inline my-2 my-lg-0" action="login.html">
+    <form class="form-inline my-2 my-lg-3" action="login.html">
       <button class="btn btn-outline-success my-2 my-sm-0 top-links">Login</button>
     </form>
-    <form class="form-inline my-2 my-lg-0" action="signup.html">
+    <form class="form-inline my-2 my-lg-3" action="signup.html">
       <button class="btn btn-success my-2 my-sm-0 top-links" href="login.html">Join Free</button>
       </form>
   </div>
