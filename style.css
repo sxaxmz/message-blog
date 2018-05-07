@@ -169,7 +169,6 @@
 			background-color: #ffc299;
 			opacity: 0.8;
 			margin: 2px auto;
-			height: 190px;
 			width: 450px;
 		}
 
@@ -319,6 +318,8 @@
      }
 
 
+
+
       @media all and (min-width: 1000px) and (max-width:1500px) {
 
      	.search-section {
@@ -346,6 +347,8 @@
      	.login-form {
      		width: 250px;
      	}
+
+     	
 
      	.search-section {
      		margin-right: 0;
