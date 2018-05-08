@@ -42,21 +42,45 @@
       </form>
         
       
-    <form class="form-inline my-2 my-lg-3" action="login.html">
-      <button class="btn btn-outline-success my-2 my-sm-0 top-links">Login</button>
+    <form class="form-inline my-2 my-lg-3">
+      <div class="profileImg"></div>
     </form>
-    <form class="form-inline my-2 my-lg-3" action="signup.html">
-      <button class="btn btn-success my-2 my-sm-0 top-links" href="login.html">Join Free</button>
+    <form class="form-inline my-2 my-lg-3">
+      <div class="profileName">profileName</div>
       </form>
   </div>
 </nav>
 
-	<div id="mid-txt" id="top" class="borders">
-		<h1> Welcome to Message/Blog! </h1>
-		<p> This is a <b>simple page</b> aims to create a <u>simple simulator</u> to the concept of blog-messaging concept. <br> This project will be built intially using <sub> HTML </sub> , <sup> Boostrap </sup> and <sub> JQuery </sub>. </p>
-	</div>
+<hr>
 
-	<hr>
+<div class="postContent">
+	<div>
+      <textarea class="form-control" rows="6" id="postView" placeholder="what is on your mind?"></textarea>
+     </div>
+      <div class="container">
+      	<div class="row">
+      	 <div class="col-md-6 col-sm-6">
+            <span class="profileImgPost"></span>
+         </div>
+         <div class="col-md-6 col-sm-6">
+             <button id="postButtonPostContent" type="button" class="btn btn-primary" value="Post">Post</button>
+         </div>
+      </div>
+     </div>
+</div>	
+
+	
+
+<div class="viewPost">
+	<div id="recent">
+		<h4> Posts: </h4>
+		<hr>
+	</div>
+	<p id="post2"></p>
+</div>
+
+<hr>
+
 <div id="post-section">
   <div id="header"> <h3>Message/Blog</h3></div>
 	<div id="posts">
@@ -80,6 +104,8 @@
 		</div>
 	</div>
 </div>
+
+
 
 
 
@@ -127,6 +153,38 @@
 	    		//clearing the textFields for new input
 	    		document.getElementById("postUser").value = "";
 	    		document.getElementById("comment").value = "";
+	    	                  }
+
+	    	  var audio = new Audio('Gum_Bubble_Pop.mp3');
+		      audio.play();
+	    	}
+	    });
+
+	    	$("#postButtonPostContent").click( function ()  {
+
+
+	    	if ( !isEmpty($("#postView").val()) ) {
+	    		alert('Must write a post!');
+	    	}
+
+	    	if ( isEmpty($("#postView").val()) ) {
+	    		
+	    		var oldNumber = number;
+	    		var newNumber = ++number;
+
+	    		var username = document.getElementById("postUser").value;
+
+	    		//checking if a new value has been added to the array
+	    		if (newNumber > oldNumber) {
+	    			//adding the text to the new array value
+	    		posts [number] = "<p>" + document.getElementById("postView").value + "</p>";
+
+	    		//adding the text as a post/message
+	    		document.getElementById("post2").innerHTML = document.getElementById("post2").innerHTML +"<div class='newPost'>"+posts[number] +"</div>";
+
+
+	    		//clearing the textFields for new input
+	    		document.getElementById("postView").value = "";
 	    	                  }
 
 	    	  var audio = new Audio('Gum_Bubble_Pop.mp3');
