@@ -100,8 +100,10 @@
 		}
 
 		.newPost {
-			background-color: #808080;
+			background-color: #ffad33;
 			border-radius: 1em;
+			margin: 5px;
+			font-weight: Bold;
 		}
 
 		.newPost h3 {
@@ -303,13 +305,13 @@
      	background-color: #ffd1b3;
      }
 
-     #postView {
+     .postContent textarea {
      	resize: none;
      	margin: 5px 10px;
      	width: 300px;
      }
 
-     #postButtonPostContent {
+     .postContent button {
      	width: 70px;
 	    margin-left: 65px;
 	    margin-bottom: 5px;
@@ -318,11 +320,12 @@
      .viewPost {
      	border: 1px #000000 solid;
      	background-color: #ffd1b3;
-     	width: 750px;
-     	margin: 5px;
+     	width: 660px;
+     	margin: 10px 5px;
      }
 
      .profileImg {
+     	float: right;
      	height: 40px;
      	width: 40px;
      	margin: 5px;
@@ -342,15 +345,79 @@
      }
 
      .profileName {
+     	margin: 5px;
      	font-size: 14px;
      	font-weight: 750;
      }
 
+     .profileName a {
+     	color: #000000;
+     }
+
+     .profileName a:hover {
+     	text-decoration: none;
+     	color: #ffffff;
+     }
+
+     .profile-section {
+     	border-radius: 2em;
+     	margin-left: 250px;
+     }
+
+     .profile-section:hover {
+     	cursor: pointer;
+     	background-color: #ADADAD;
+     	color: #ffffff;
+     }
+
+     .btn-send {
+     	width: 60px;
+     	height: 30px;
+     }
+
+     .footer {
+     	bottom: 0;
+		width: 100%;
+     	position: fixed;
+     	height: 110px;
+		line-height: 60px;
+     	background-color: #F8F9FA;
+     }
+
       @media all and (min-width: 1000px) and (max-width:1500px) {
 
-     	.search-section {
-     		margin-right: 150px;
-     	}
+
+     	 .postContent textarea {
+     	width: 300px;
+     }
+        .postContent button {
+	    margin-left: 170px;
+     }
+
+       .profileImgPost {
+     	margin: 0;
+     }
+
+       .viewPost {
+     	width: 595px;
+     	margin-left: 50px;
+     }
+
+     .profile-section {
+     	margin-left: 150px;
+     	width: 148px;
+     }
+
+     .profileName {
+     	margin: 5px;
+     }
+
+     .profileImg {
+     	float: right;
+     	height: 40px;
+     	width: 40px;
+
+     }
 
      }
 
@@ -366,6 +433,37 @@
      		width: 20%;
      	}
 
+     	.postContent {
+     	width: 210px;
+     }
+
+       .postContent textarea {
+     	width: 190px;
+     }
+       .postContent button {
+	    margin-left: 80px;
+     }
+
+     .profileImgPost {
+     	margin: 0;
+     }
+
+     .viewPost {
+     	width: 390px;
+     }
+
+     .profileName {
+     	margin: 5px;
+     }
+
+     .profileImg {
+     	float: right;
+     	height: 40px;
+     	width: 40px;
+     	margin: 5px;
+
+     }
+
      }
 
       @media all and (min-width: 500px) and (max-width:700px) {
@@ -373,8 +471,6 @@
      	.login-form {
      		width: 250px;
      	}
-
-     	
 
      	.search-section {
      		margin-right: 0;
@@ -389,9 +485,28 @@
      		float: right;
      	}
 
+     	.postContent {
+     	width: 210px;
      }
 
-     @media all and (max-width:500px){
+       .postContent textarea {
+     	width: 190px;
+     }
+       .postContent button {
+	    margin-left: 10px;
+     }
+
+     .profileImgPost {
+     	margin: 0;
+     }
+
+     .viewPost {
+     	width: 350px;
+     }
+
+     }
+
+     @media all and (max-width:500px) and (min-width:421px){
 
      	.login-form {
      		width: 250px;
@@ -413,5 +528,144 @@
      	.search-section input {
      		float: right;
      	}
+
+     	.postContent {
+     	margin-right: 15px;
+     	margin-left: 45px;
+     	width: 80%;
+     }
+
+       .postContent textarea {
+     	width: 95%;
+     }
+       .postContent button {
+	    margin-left: 280px;
+     }
+
+     .profileImgPost {
+     	width: 30px;
+     	height: 30px;
+     	margin: 0;
+     }
+
+     .viewPost {
+     	width: 100%;
+     	}
+
+     }
+
+      @media all and (max-width:420px) and (min-width:371px){
+
+      	.login-form {
+     		width: 250px;
+     	}
+
+     	.container-contact {
+     		width: 250px;
+     	}
+
+     	.search-section {
+     		margin-right: 0;
+     		
+     	}
+
+     	.search-section button {
+     		margin: 10px;
+     	}
+
+     	.search-section input {
+     		float: right;
+     	}
+
+     	.postContent {
+     		margin-right: 15px;
+     		margin-left: 45px;
+     	width: 80%;
+     }
+
+       .postContent textarea {
+     	width: 95%;
+     }
+       .postContent button {
+	    margin-left: 180px;
+     }
+
+     .profileImgPost {
+     	width: 30px;
+     	height: 30px;
+     	margin: 0;
+     }
+
+     .viewPost {
+     	width: 100%;
+     	}
+
+     .profile-section {
+     	margin-left: 250px;
+     }
+
+
+     }
+
+     @media all and (max-width:370px){
+
+     	.login-form {
+     		width: 250px;
+     	}
+
+     	.container-contact {
+     		width: 250px;
+     	}
+
+     	.search-section {
+     		margin-right: 0;
+     		
+     	}
+
+     	.search-section button {
+     		margin: 10px;
+     	}
+
+     	.search-section input {
+     		float: right;
+     	}
+
+     	.postContent {
+     		margin-right: 15px;
+     		margin-left: 45px;
+     	width: 80%;
+     }
+
+       .postContent textarea {
+     	width: 95%;
+     }
+       .postContent button {
+	    margin-left: 140px;
+     }
+
+     .profileImgPost {
+     	width: 30px;
+     	height: 30px;
+     	margin: 0;
+     }
+
+     .viewPost {
+     	width: 100%;
+     	}
+
+     .profile-section {
+     	padding-right: 150px;
+     }
+
+      .profileName {
+     	margin: 5px;
+     }
+
+     .profileImg {
+     	float: right;
+     	height: 40px;
+     	width: 40px;
+
+     }
 
      }

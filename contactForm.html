@@ -116,13 +116,26 @@ if ($error == "" && $missing == "") {
       <label>Subject: </label><input id="emailSubject" type="text" class="form-control" name="subject" placeholder="Email subject">
       <label>Message: </label><textarea id="emailMsg" type="text" class="form-control" row="5" name="msg" placeholder="Enter your message"></textarea>
       <br>
-      <button id="sendEmail" type="submit" class="btn btn-primary">Send </button>
+      <button id="sendEmail" type="submit" class="btn btn-primary btn-send">Send </button>
     </form>
     </div>
 
     <br><br>
-    <h3 style="text-align: center;"> This page is the UI only <sup>(only JS validations are working)</sup>, in-order to get the contact form running the file type should be changed from ".html" to ".php" and it should be used on a server that have SMTP or any other email services/packages installed</h3>
 
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-6 col-xs-12">
+             <img class="mb-2" src="images/MB-logo.png" alt="" width="120" height="120">
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <span class="d-block mb-3 text-muted" style="margin-top: 50px;">&copy; <a href="https://github.com/sxaxmz/message-blog">Osama Hussein   </a> 2018</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     
