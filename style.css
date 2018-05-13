@@ -384,6 +384,51 @@
      	background-color: #F8F9FA;
      }
 
+     .profileArea {
+        background-color: #ffa366;
+        border: 1px #000 solid;
+        border-radius: 2em;
+        width: 350px;
+        margin: 5px;
+     }
+
+     .profileInfo {
+        margin: 0 auto;
+        text-align: center;
+        width: 50%;
+     }
+
+     .profileInfoImg {
+        height: 40px;
+        width: 40px;
+        margin: 5px auto;
+        border: 1px #000000 solid;
+        border-radius: 50%;
+        background-color: #ffffff;
+     }
+
+     .profileInfoBrief {
+        color: #666666;
+        font-family: "Comic Sans MS", cursive, sans-serif;
+     }
+
+     .profileInfoBrief p {
+        margin-top: 8px;
+        font-size: 12px;
+     }
+
+     .profileInfoName {
+        font-size: 16px;
+     }
+
+     .pinnedInfo {
+        background-color: #ffa366;
+        border: 1px #000 solid;
+        border-radius: 2em;
+        width: 320px;
+        margin: 5px auto;
+     }
+
       @media all and (min-width: 1000px) and (max-width:1500px) {
 
 
@@ -504,6 +549,10 @@
      	width: 350px;
      }
 
+     .footer {
+        width: 100%;
+     }
+
      }
 
      @media all and (max-width:500px) and (min-width:421px){
@@ -551,6 +600,10 @@
      .viewPost {
      	width: 100%;
      	}
+
+        .footer {
+        width: 100%;
+     }
 
      }
 
@@ -602,6 +655,10 @@
 
      .profile-section {
      	margin-left: 250px;
+     }
+
+     .footer {
+        width: 100%;
      }
 
 
@@ -666,6 +723,10 @@
      	height: 40px;
      	width: 40px;
 
+     }
+
+     .footer {
+        width: 100%;
      }
 
      }

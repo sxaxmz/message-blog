@@ -1,0 +1,201 @@
+<doctype html>
+<html>
+
+	<head>
+		<title> Message/Blog </title>
+
+		<meta charset="utf-8" />
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link href="JQueryUI/jquery-ui.css" rel="stylesheet">
+        <script src="JQueryUI/jquery-ui.js"></script>
+
+        <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+	</head>
+
+	<body>
+
+<nav class="navbar navbar-expand-lg navbar-light sticky-top bg-light">
+  <a class="navbar-brand logo" href="landing.html">Message-Blog</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="navbar-nav mr-auto">
+
+      <a class="nav-item menu-item nav-link" href="landing.html">Home </a>
+        <a class="nav-item menu-item active nav-link" href="#">Feeds </a>
+        <a class="nav-item menu-item nav-link" href="contactForm.html">Contact Us </a>
+        <a class="nav-item nav-link menu-item disabled" href="#">Followers</a>
+    </div>
+
+    <form class="form-inline my-2 my-lg-3 search-section">
+        <input class="form-control mr-sm-1" type="search" placeholder="Search" aria-label="Search" />
+        <button class="btn btn-outline-success my-2 my-sm-1" type="submit">Search</button>
+      </form>
+        
+      
+    <form class="form-inline my-2 my-lg-3">
+    <div class="profile-section">
+
+      <div class="profileName">
+      	<span><a id="profileName" href="#">profileName</a></span>
+      	<span class="profileImg"></span>
+      </div>
+
+    </div>
+      </form>
+  </div>
+</nav>
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-4 col-md-4 col-sm-12 xs-12">
+			<div class="profileArea">
+				<div class="profileInfo">
+					<div class="profileName">
+						<div class="profileInfoImg"></div>
+					  	<span><a id="profileName" class="profileInfoName" href="#">profileName</a></span>
+					  	<div class="profileInfoBrief"><p> Brief info about the user.</p></div>
+					</div>
+				</div>
+			</div>
+			<div class="pinnedInfo">
+				<h3 style="text-align: center;">Hashtags/pinned info section</h3>
+			</div>
+		</div>
+		<div class="col-lg-8 col-md-8 col-sm-12 xs-12">
+			<div class="postContent">
+				<div>
+			      <textarea class="form-control" rows="6" id="postView" placeholder="what is on your mind?"></textarea>
+			     </div>
+			     <div class="container">
+			      	<div class="row">
+			      	 <div class="col-lg-2 col-md-2 col-sm-2 xs-12">
+			               <span class="profileImgPost"></span>
+			         </div>
+			            <div class="col-lg-10 col-md-10 col-sm-10 xs-12">
+			                <button id="postButtonPostContent" type="button" class="btn btn-primary" value="Post">Post</button>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+			<div class="viewPost">
+				<div id="recent">
+					<h4> Posts: </h4>
+					<hr>
+				</div>
+				<p id="post2"></p>
+			</div>
+		</div>
+	</div>
+</div>
+															-->
+
+	<footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-6 col-xs-12">
+             <img class="mb-2" src="images/MB-logo.png" alt="" width="120" height="120">
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-12">
+            <span class="d-block mb-3 text-muted" style="margin-top: 50px;">&copy; <a href="https://github.com/sxaxmz/message-blog">Osama Hussein   </a> 2018</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+    <script type="text/javascript">
+    	    	function isEmpty(val){
+          return ((val !== '') && (val !== undefined) && (val.length > 0) && (val !== null));
+      }
+
+	    	var number = 0;
+	    	var posts = new Array();
+	    	posts[0] = "";
+
+	    	$("#post-section").draggable();
+
+	    	$("#type-form").draggable({containment: "#type-section", scroll: false});
+
+	    	$("#postButton").click( function ()  {
+
+	    	if ( !isEmpty($("#postUser").val()) ) {
+	    		alert('Must enter username!');
+	    	}
+
+	    	if ( !isEmpty($("#comment").val()) ) {
+	    		alert('Must write a post!');
+	    	}
+
+	    	if ( isEmpty($("#postUser").val()) && isEmpty($("#comment").val()) ) {
+	    		
+	    		var oldNumber = number;
+	    		var newNumber = ++number;
+
+	    		var username = document.getElementById("postUser").value;
+
+	    		//checking if a new value has been added to the array
+	    		if (newNumber > oldNumber) {
+	    			//adding the text to the new array value
+	    		posts [number] = "<p>" + document.getElementById("comment").value + "</p>";
+
+	    		//adding the text as a post/message
+	    		document.getElementById("post").innerHTML = document.getElementById("post").innerHTML +"<div class='newPost'>" +"<h3>"+username+"</h3>" +posts[number] +"</div>";
+
+
+	    		//clearing the textFields for new input
+	    		document.getElementById("postUser").value = "";
+	    		document.getElementById("comment").value = "";
+	    	                  }
+
+	    	  var audio = new Audio('Gum_Bubble_Pop.mp3');
+		      audio.play();
+	    	}
+	    });
+
+	    	$("#postButtonPostContent").click( function ()  {
+
+
+	    	if ( !isEmpty($("#postView").val()) ) {
+	    		alert('Must write a post!');
+	    	}
+
+	    	if ( isEmpty($("#postView").val()) ) {
+	    		
+	    		var oldNumber = number;
+	    		var newNumber = ++number;
+
+	    		//var username = document.getElementById("postUser").value;
+
+	    		//checking if a new value has been added to the array
+	    		if (newNumber > oldNumber) {
+	    			//adding the text to the new array value
+	    		posts [number] = "<p>" + document.getElementById("postView").value + "</p>";
+
+	    		//adding the text as a post/message
+	    		document.getElementById("post2").innerHTML = document.getElementById("post2").innerHTML +"<div class='newPost'>"+posts[number] +"</div>";
+
+
+	    		//clearing the textFields for new input
+	    		document.getElementById("postView").value = "";
+	    	                  }
+
+	    	  var audio = new Audio('Gum_Bubble_Pop.mp3');
+		      audio.play();
+	    	}
+	    });
+	    </script>
+
+	</body>
+</html>
