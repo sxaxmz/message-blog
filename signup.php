@@ -1,49 +1,36 @@
-<!--
 <?php
-
 $username = $_POST['username'];
 $password = $_POST['password'];
 $email = $_POST['email'];
 $name = $_POST['name'];
-
 $error = "";
 $missing = "";
-
 $result = "";
-
 if ($_POST) {
   
-
 if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
  $error .= "<p>".$email." is considered Invalid.</p>"; 
 }
-
 if (!$username) {
   $missing .=  "<p>Username is empty<p/>";
 }
 if (!$Password) {
   $missing .=  "<p>Password is empty</p>";
 }
-
 if (!$email) {
   $missing .=  "<p>Email is empty</p>";
 }
-
 if (!$name) {
   $missing .=  "<p>Name is empty</p>";
 }
-
 if ($error != "") {
   $error = '<div class="alert alert-danger" role="alert"> <p> There are some missing field(s): </p>'.$error.' </div>';
 }
-
 if ($missing != "") {
   $missing = '<div class="alert alert-warning" role="alert"> <p> There are some error(s): </p> '.$missing.' </div>';
 }
-
 if ($error == "" && $missing == "") {
   include("connection.php");
-
 if (array_key_exists("logout", $_GET)) {
   unset($_SESSION);
   setcookie("username", "", time() - 60*60);
@@ -51,12 +38,8 @@ if (array_key_exists("logout", $_GET)) {
 } else  if ( (array_key_exists("username", $_SESSION) && $_SESSION['username']) || (array_key_exists("username", $_COOKIE) && $_COOKIE['username']) ) {
   header("Location: index.html");
 }
-
 if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['email']) && isset($_POST['name'])) {
-
  $query = "INSERT INTO user (name, username, password, email) VALUES ('$_POST['name']','$_POST['username']','md5(md5($_POST['username']).$_POST['password'])','$_POST['email']')"; 
-
-
   if ( $result = mysqli_query($connection, $query) ) {
   
          
@@ -66,13 +49,10 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['emai
        $error = "<p>Connection error! </p>"; 
 }
   }
-
-
-
 }
   
 }
-?> -->
+?>
 
 
 <!-- This page is the UI only, in-order to get the login form running the file type should be changed from ".html" to ".php"-->
@@ -192,13 +172,10 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['emai
 
     <script type="text/javascript">
       var fieldMissing = "";
-
       function isEmail(email) {
     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
     return regex.test(email);
     }
-
-
       $("form").submit(function (e) {
         
         if (isEmail($("#emailFrom").val()) == false) {
@@ -211,11 +188,9 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['emai
         if ($("#name").val() == "") {
           fieldMissing += "<p>Name</p>";
         }
-
         if ($("#password").val() == ""){
           fieldMissing += "<p>Password</p>";
         }
-
         if ($("#passwordConfirm").val() == "") {
           fieldMissing += "<p>Password Confirm</p>";
         }
@@ -228,7 +203,6 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['emai
         fieldMissing = "";
        
     }); 
-
 	    </script>
 
 	</body>

@@ -1,4 +1,3 @@
-<!--
 <?php
 
 $username = $_POST['username'];
@@ -69,7 +68,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 }
   
 }
-?> -->
+?>
 
 
 <!-- This page is the UI only, in-order to get the login form running the file type should be changed from ".html" to ".php"-->

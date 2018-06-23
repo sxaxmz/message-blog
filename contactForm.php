@@ -1,4 +1,3 @@
-<!--
 <?php
 /** REQUIRE RUNNING SERVER WITH SMTP OR EMAIL SERVICES/PACKAGE INSTALLED**/
 $emailTo = "noreply@firstwebpage3.com";
@@ -47,7 +46,7 @@ if ($error == "" && $missing == "") {
 }
   
 }
-?> -->
+?>
 
 <!-- This page is the UI only, in-order to get the contact form running the file type should be changed from ".html" to ".php"-->
 <!-- and it should be used on a server that have SMTP or any other email services/packages installed -->

@@ -9,21 +9,17 @@ This project shall contain a prototype blog/messaging medium.
 
 #ToDo (Not Sorted):
 
-
-1) Identify user's variables that will be needed.
-2) Modify search to view user's info/posts, etc.
-3) Header view based on user access status (guest/logged-in user).
-4) The draggable Message/Blog to be used as toggled dialog/popup.
-5) Modify DB.
+1) Modify search to view user's info/posts, etc.
+2) Header view based on user access status (guest/logged-in user).
+3) The draggable Message/Blog to be used as toggled dialog/popup.
+4) Modify DB.
 
 
 #Database: 
 1) Tables : 
   i) User
   ii)Post
-
-
-(to be restructured /\extra table to link post w/ user /\ )
+  iii)postUser
 
 
 **To be updated**
