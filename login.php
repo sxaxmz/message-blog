@@ -109,7 +109,7 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
 
         <a class="nav-item menu-item nav-link" href="landing.html">Home </a>
         <a class="nav-item menu-item nav-link" href="index.html">Feeds </a>
-        <a class="nav-item menu-item nav-link" href="contactForm.html">Contact Us </a>
+        <a class="nav-item menu-item nav-link" href="contactForm.php">Contact Us </a>
         <a class="nav-item nav-link menu-item disabled" href="#">Followers</a>
       </div>
 
@@ -119,11 +119,11 @@ if (isset($_POST['username']) && isset($_POST['password'])) {
       </form>
         
 
-    <form class="form-inline my-2 my-lg-3" action="login.html">
+    <form class="form-inline my-2 my-lg-3" action="login.php">
       <button class="btn btn-outline-success my-2 my-sm-0 top-links top-links-login">Login</button>
     </form>
-    <form class="form-inline my-2 my-lg-3" action="signup.html">
-      <button class="btn btn-success my-2 my-sm-0 top-links" href="signup.html">Join Free</button>
+    <form class="form-inline my-2 my-lg-3" action="signup.php">
+      <button class="btn btn-success my-2 my-sm-0 top-links" href="signup.php">Join Free</button>
       </form>
 
   </div>

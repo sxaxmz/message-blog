@@ -14,7 +14,11 @@
 		#post-section {
 		margin: 10px auto;	
 		width: 600px;
+        height: 450px;
 		opacity: 0.8;
+        display: none;
+        position: aboslute;
+        left: 360px;
 		}
 
 		#posts {
@@ -255,7 +259,7 @@
 
 		.search-section button {
 			height: 30px;
-			width: 80px;
+			width: 50px;
 		}
 
 		.search-section input {
@@ -379,7 +383,7 @@
      	bottom: 0;
 		width: 100%;
      	position: fixed;
-     	height: 110px;
+     	height: 100px;
 		line-height: 60px;
      	background-color: #F8F9FA;
      }
@@ -427,6 +431,42 @@
         border-radius: 2em;
         width: 320px;
         margin: 5px auto;
+     }
+
+     .msg-bar {
+        bottom: 0;
+        width: 100%;
+        position: fixed;
+        height: 133px;
+        line-height: 60px;
+        background-color: #DAD1D1;
+     }
+
+     .msg-bar-section {
+        margin: 5px;
+        float: right;
+        height: 28px;
+        position: relative;
+        bottom: 20px;
+     }
+
+     .msg-bar-section span {
+        padding: 5px;
+        background-color: #C2BDBD;
+        border: 0.5px solid #000000;
+        height: 100%;
+        width: 100px;
+        margin: 2px;
+     }
+
+     .msg-bar-section a {
+        text-decoration: none;
+        color: #000;
+     }
+
+     .msg-bar-section a:hover {
+        text-decoration: none;
+        color: #000;
      }
 
       @media all and (min-width: 1000px) and (max-width:1500px) {

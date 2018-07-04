@@ -1,0 +1,86 @@
+
+<div id="post-section">
+  <div id="header"> <h3>Message/Blog</h3></div>
+	<div id="posts">
+	  <div id="type-section">
+	   <form id="type-form">
+	   	<span>
+		  <input id="postUser" type="text" placeholder="username"> <input id="postButton" type="button" class="btn btn-primary" value="Post"><br>
+		  <textarea class="form-control" rows="2" id="comment" placeholder="what is on your mind ?"></textarea>
+		  <br>  
+	    </span>
+	   </form>
+	  </div>
+
+		<div id="posted">
+			<div id="recent">
+			<h4> recent: </h4>
+			 <hr>
+			</div>
+			<p id="post"></p>
+		</div>
+	</div>
+</div>
+
+
+<div class="msg-bar" id="msg-bar"> 
+		<div class="msg-bar-section">
+			<a href="#post-section"><span id="btnToggleMessage">Show Message Section</span></a>
+		    <!--<button id="btnToggleMessage" type="button" class="btn btn-primary" value="Post">Show Message Section</button>-->
+	    </div>
+	</div>
+
+<script>
+function isEmpty(val){
+          return ((val !== '') && (val !== undefined) && (val.length > 0) && (val !== null));
+      }
+
+	    	var number = 0;
+	    	var posts = new Array();
+	    	posts[0] = "";
+
+	    	$("#post-section").draggable();
+
+	    	$("#type-form").draggable({containment: "#type-section", scroll: false});
+
+	    	$("#postButton").click( function ()  {
+
+	    	if ( !isEmpty($("#postUser").val()) ) {
+	    		alert('Must enter username!');
+	    	}
+
+	    	if ( !isEmpty($("#comment").val()) ) {
+	    		alert('Must write a post!');
+	    	}
+
+	    	if ( isEmpty($("#postUser").val()) && isEmpty($("#comment").val()) ) {
+	    		
+	    		var oldNumber = number;
+	    		var newNumber = ++number;
+
+	    		var username = document.getElementById("postUser").value;
+
+	    		//checking if a new value has been added to the array
+	    		if (newNumber > oldNumber) {
+	    			//adding the text to the new array value
+	    		posts [number] = "<p>" + document.getElementById("comment").value + "</p>";
+
+	    		//adding the text as a post/message
+	    		document.getElementById("post").innerHTML = document.getElementById("post").innerHTML +"<div class='newPost'>" +"<h3>"+username+"</h3>" +posts[number] +"</div>";
+
+
+	    		//clearing the textFields for new input
+	    		document.getElementById("postUser").value = "";
+	    		document.getElementById("comment").value = "";
+	    	                  }
+
+	    	  var audio = new Audio('Gum_Bubble_Pop.mp3');
+		      audio.play();
+	    	}
+	    });
+
+	    	$("#btnToggleMessage").click(function(){
+             $("#post-section").toggle();
+        });
+
+</script>

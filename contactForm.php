@@ -91,13 +91,14 @@ if ($error == "" && $missing == "") {
         <button class="btn btn-outline-success my-2 my-sm-1" type="submit">Search</button>
       </form>
         
-      
+     <div id="userStatus"> 
     <form class="form-inline my-2 my-lg-3" action="login.html">
       <button class="btn btn-outline-success my-2 my-sm-0 top-links">Login</button>
     </form>
     <form class="form-inline my-2 my-lg-3" action="signup.html">
       <button class="btn btn-success my-2 my-sm-0 top-links" href="login.html">Join Free</button>
       </form>
+    </div>
   </div>
 </nav>
 
