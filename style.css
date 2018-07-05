@@ -89,6 +89,10 @@
 			margin:15px;
 		}
 
+        #post2 {
+            margin:15px;
+        }
+
 		#recent {
 			width: 450px;
 			margin: 0 auto;
@@ -104,7 +108,7 @@
 		}
 
 		.newPost {
-			background-color: #ffad33;
+			background-color: #0059FF;
 			border-radius: 1em;
 			margin: 5px;
 			font-weight: Bold;
@@ -114,10 +118,37 @@
 			margin: 5px;
 		}
 
+        .newPost h3:hover {
+            color: #ffffff;
+            cursor: default;
+        }
+
 		.newPost p {
 			margin: 5px;
-			word-wrap: break-word
+			word-wrap: break-word;
+            color: #ffffff;
 		}
+
+        .newPostOther {
+            background-color: #E5E5E5;
+            border-radius: 1em;
+            margin: 5px;
+            font-weight: Bold;
+        }
+
+        .newPostOther h3 {
+            margin: 5px;
+        }
+
+        .newPostOther h3:hover {
+            color: #0756c4;
+            cursor: default;
+        }
+
+        .newPostOther p {
+            margin: 5px;
+            word-wrap: break-word;
+        }
 
 		#header {
 			width: 100%;
@@ -327,6 +358,19 @@
      	width: 660px;
      	margin: 10px 5px;
      }
+
+     .viewPost hr {
+            border-color: #000000;
+        }
+
+     .viewPost p {
+            color: #000000;
+        }
+
+     .viewPost h3 {
+            color: #000000;
+            font-weight: bold;
+        }
 
      .profileImg {
      	float: right;

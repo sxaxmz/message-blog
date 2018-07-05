@@ -82,7 +82,7 @@
 	 <div class="col-lg-8 col-md-8 col-sm-7 xs-12">
 	   <div class="viewPost">
 			<div id="recent">
-				<h4> Posts: </h4>
+				<h4> Recent: </h4>
 				<hr>
 			</div>
 			<p id="post2"></p>
@@ -94,7 +94,7 @@
 <hr>
 																	<!-- Toogled start -->
 <div id="post-section">
-  <div id="header"> <h3>Message/Blog</h3></div>
+  <div id="header"> <h3>Messenger</h3></div>
 	<div id="posts">
 	  <div id="type-section">
 	   <form id="type-form">
@@ -108,7 +108,7 @@
 
 		<div id="posted">
 			<div id="recent">
-			<h4> recent: </h4>
+			<h4> Recent: </h4>
 			 <hr>
 			</div>
 			<p id="post"></p>
@@ -140,13 +140,14 @@
 
     <script type="text/javascript">
 
-    	function isEmpty(val){
-          return ((val !== '') && (val !== undefined) && (val.length > 0) && (val !== null));
-      }
+	    	function isEmpty(val){
+	          return ((val !== '') && (val !== undefined) && (val.length > 0) && (val !== null));
+	         }
 
 	    	var number = 0;
 	    	var posts = new Array();
 	    	posts[0] = "";
+	    	var profileName = document.getElementById("profileName").text;
 
 	    	$("#post-section").draggable();
 
@@ -173,15 +174,34 @@
 	    		if (newNumber > oldNumber) {
 	    			//adding the text to the new array value
 	    		posts [number] = "<p>" + document.getElementById("comment").value + "</p>";
+	    		var divId = "newPost"+number;
 
 	    		//adding the text as a post/message
-	    		document.getElementById("post").innerHTML = document.getElementById("post").innerHTML +"<div class='newPost'>" +"<h3>"+username+"</h3>" +posts[number] +"</div>";
+	    		document.getElementById("post").innerHTML = document.getElementById("post").innerHTML +"<div id='newPost2"+number+"'> <h3 id='usersPost'>"+username+"</h3>" +"<p>"+posts[number]+"</p></div>";
+
+	    		document.getElementById("post2").innerHTML = document.getElementById("post2").innerHTML +"<div id='newPost"+number+"'> <h3 id='usersPost'>"+username+"</h3>" +"<p>"+posts[number]+"</p></div>";
 
 
 	    		//clearing the textFields for new input
 	    		document.getElementById("postUser").value = "";
 	    		document.getElementById("comment").value = "";
-	    	                  }
+	    		document.getElementById("usersPost").innerHTML = username;
+
+	    	    }
+
+	    	    console.log(document.getElementById("usersPost").innerHTML);
+	    	    
+			    if (document.getElementById("usersPost").innerHTML == profileName) {
+
+					document.getElementById("newPost"+number+"").classList.add('newPost');
+					document.getElementById("newPost2"+number+"").classList.add('newPost');
+
+			    } else if (document.getElementById("usersPost").innerHTML != profileName){
+					document.getElementById("newPost"+number+"").classList.add('newPostOther');
+					document.getElementById("newPost2"+number+"").classList.add('newPostOther');
+					document.getElementById("newPost"+number+"").style.marginLeft = "300px";
+					document.getElementById("newPost2"+number+"").style.marginLeft = "300px";
+			    }
 
 	    	  var audio = new Audio('Gum_Bubble_Pop.mp3');
 		      audio.play();
@@ -208,12 +228,32 @@
 	    		posts [number] = "<p>" + document.getElementById("postView").value + "</p>";
 
 	    		//adding the text as a post/message
-	    		document.getElementById("post2").innerHTML = document.getElementById("post2").innerHTML +"<div class='newPost'>"+posts[number] +"</div>";
+	    		document.getElementById("post2").innerHTML = document.getElementById("post2").innerHTML +"<div id='newPost2"+number+"'> <h3 id='usersPost'>"+profileName+"</h3>"+"<p>"+posts[number]+"</p></div>";
 
+	    		document.getElementById("post").innerHTML = document.getElementById("post").innerHTML +"<div id='newPost"+number+"'> <h3 id='usersPost'>"+profileName+"</h3>"+"<p>"+posts[number]+"</p> </div>";
 
+	    
 	    		//clearing the textFields for new input
 	    		document.getElementById("postView").value = "";
-	    	                  }
+	    		document.getElementById("usersPost").innerHTML = profileName;
+	    	    }
+
+	    	    console.log(document.getElementById("usersPost").innerHTML);
+
+	    	    document.getElementById("newPost"+number+"").style.width = "300px";
+				document.getElementById("newPost2"+number+"").style.width = "300px";
+				
+			    if (document.getElementById("usersPost").innerHTML == profileName) {
+
+					document.getElementById("newPost"+number+"").classList.add('newPost');
+					document.getElementById("newPost2"+number+"").classList.add('newPost');
+
+			    } else if (document.getElementById("usersPost").innerHTML != profileName){
+					document.getElementById("newPost"+number+"").classList.add('newPostOther');
+					document.getElementById("newPost2"+number+"").classList.add('newPost');
+					document.getElementById("newPost"+number+"").style.marginLeft = "300px";
+					document.getElementById("newPost2"+number+"").style.marginLeft = "300px";
+			    }
 
 	    	  var audio = new Audio('Gum_Bubble_Pop.mp3');
 		      audio.play();
@@ -223,6 +263,8 @@
 	    	 $("#btnToggleMessage").click(function(){
              $("#post-section").toggle();
         });
+
+
 
 	    </script>
 
