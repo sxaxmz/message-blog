@@ -236,26 +236,29 @@
 	    		var divId = "newPost"+number;
 
 	    		//adding the text as a post/message
-	    		document.getElementById("post").innerHTML = document.getElementById("post").innerHTML +"<div id='newPost2"+number+"'> <h3 id='usersPost'>"+username+"</h3>" +"<p>"+posts[number]+"</p></div>";
+	    		document.getElementById("post").innerHTML = document.getElementById("post").innerHTML +"<div id='newPost"+number+"'> <h3 id='usersPost'>"+username+"</h3>" +"<p>"+posts[number]+"</p></div>";
 
-	    		document.getElementById("post2").innerHTML = document.getElementById("post2").innerHTML +"<div id='newPost"+number+"'> <h3 id='usersPost'>"+username+"</h3>" +"<p>"+posts[number]+"</p></div>";
+	    		document.getElementById("post2").innerHTML = document.getElementById("post2").innerHTML +"<div id='newPost2"+number+"'> <h3 id='usersPost'>"+username+"</h3>" +"<p>"+posts[number]+"</p></div>";
 
 
+				var usersPost = document.getElementById("usersPost").innerHTML;
 	    		//clearing the textFields for new input
 	    		document.getElementById("postUser").value = "";
 	    		document.getElementById("comment").value = "";
-	    		document.getElementById("usersPost").innerHTML = username;
+	    		usersPost = username;
 
 	    	    }
 
-	    	    console.log(document.getElementById("usersPost").innerHTML);
+	    	    console.log(document.getElementById("usersPost").text);
+
 	    	    
-			    if (document.getElementById("usersPost").innerHTML == profileName) {
+	    	    
+			    if (usersPost == profileName) {
 
 					document.getElementById("newPost"+number+"").classList.add('newPost');
 					document.getElementById("newPost2"+number+"").classList.add('newPost');
 
-			    } else if (document.getElementById("usersPost").innerHTML != profileName){
+			    } else if (usersPost != profileName){
 					document.getElementById("newPost"+number+"").classList.add('newPostOther');
 					document.getElementById("newPost2"+number+"").classList.add('newPostOther');
 					document.getElementById("newPost"+number+"").style.marginLeft = "300px";
